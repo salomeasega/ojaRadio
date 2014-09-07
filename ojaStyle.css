@@ -1,3 +1,17 @@
+@import "http://webfonts.ru/import/russosans.css";
+
+* {
+  transition:.25s ease-in-out;
+}
+
+ @font-face {
+  font-family: 'Helvetica Neue';
+  src: url('HelveticaNeueDeskUI.ttc') format('truetype');
+}
+
+body {
+	background: orange;
+}
 .wrapper {
 min-height: 100%;
 height: auto !important;
@@ -19,11 +33,25 @@ font-weight: bold;
 text-transform: uppercase;
 }
 
-.streamPic {
+/*<!--.streamPic {
 margin: 0;
 padding: 0;
 border: 0;
 position: absolute;
+}*/
+
+.liveStreamNote {
+  width: 150px;
+  height: 32px;
+  overflow: auto;
+  margin: auto;
+  position: fixed;
+  top: 80%;
+  left: 85%;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'Helvetica Neue';
 }
 
 .player {
@@ -31,9 +59,9 @@ width: 150px;
 height: 30px;
 overflow: auto;
 margin: auto;
-position: absolute;
-top: 50%;
-left: 0;
+position: fixed;
+top: 95%;
+left: 85%;
 bottom: 0;
 right: 0;
 }
@@ -46,3 +74,119 @@ font-weight: bold;
 text-transform: uppercase;
 width: 100%;
 }
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 35%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -25px;
+    margin: auto;
+    -webkit-perspective:1000px;
+    -moz-perspective:1000px;
+    -mos-perspective:1000px;
+    -o-perspective:1000px;
+    perspective:1000px;
+}
+
+.header{
+  position:absolute;
+  bottom: 0.05em;
+  right: 0.25em;
+  color: #f2f2f2;
+  font-size:13em;
+  font-family: 'Helvetica Neue';
+  letter-spacing: -0.095em;
+  -webkit-transform: rotate3d(0,1,0,-45deg);
+  text-shadow: 1px -1px 0px #d8d8d8,
+               2px -1px 0px #d8d8d8,
+               3px -1px 0px #d8d8d8,
+               4px -1px 0px #ddd,
+               5px -2px 0px #ddd,
+               6px -2px 0px #ddd,
+               7px -2px 0px #ddd,
+               8px -2px 0px #ddd,
+               9px -3px 0px #ddd,
+              10px -3px 0px #ddd,
+              11px -3px 0px #ddd,
+              12px -3px 0px #ddd,
+              13px -4px 0px #ddd,
+              14px -4px 0px #ddd,
+              15px -4px 0px #ddd,
+              16px -4px 0px #ddd,
+              17px -5px 0px #ddd,
+              18px -5px 0px #ddd,
+              19px -5px 0px #bbb,
+              20px -5px 0px #bbb;
+}
+
+.header span:nth-child(2):before{
+  position: absolute;
+  content: '';
+  left: 0.685em;
+  bottom: 0.2em;
+  width: 0.5em;
+  height: 0.1em;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-transform: rotate3d(1,0,0,-45deg);
+
+}  
+
+.header span:nth-child(2):after{
+  position: absolute;
+  content: '';
+  left: 0.685em;
+  bottom: 0.2em;
+  width: 0em;
+  height: 0em;
+  -webkit-box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow:    0px 0px 100px 0px rgba(0, 0, 0, 1);
+  box-shadow:         0px 0px 100px 0px rgba(0, 0, 0, 1);
+  z-index: -1;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-transform: rotate3d(1,0,0,-45deg);
+}
+
+#menu {
+  width: 350px; 
+  font-family: 'Helvetica Neue';
+  font-weight:200; }
+  #menu > ul {
+    position: relative;
+    transform-origin: left center;
+    transform-style: preserve-3d; }
+    #menu > ul:hover {
+      transform: perspective(1000px) rotateY(-70deg); }
+    #menu > ul > li {
+      display: block;
+      padding: 20px;
+      background: white; }
+      #menu > ul > li > ul {
+        position: absolute;
+        z-index: 0;
+        left: 100%;
+        top: 0;
+        bottom: 0;
+        overflow: scroll;
+        width: 100%;
+        background: #FFBAD2;
+        transform-origin: left center;
+        transform-style: preserve-3d;
+        transform: perspective(1000px) rotateY(90deg) scaleX(0.8); 
+        list-style-type: none; }
+        #menu > ul > li > ul > li {
+          padding: 20px; }
+          #menu > ul > li > ul > li:hover {
+            background: #FF005B; }
+      #menu > ul > li:hover {
+        background: #FF005B; }
+        #menu > ul > li:hover > ul {
+          z-index: 5000; }
