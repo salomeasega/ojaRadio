@@ -1,66 +1,168 @@
 
+<!DOCTYPE html>
 <html>
 <head>
-	<title> OJ RADIO </title>
+	<title> OJBK FM </title>
 	<link rel= "stylesheet" href = "ojaStyle.css" />
+	<script type ="text/javascript" src = "ojaParallax.js"></script>
+	<script type ="text/javascript" src = "memoriesoftheeast.js"></script>
+	<script src="https://api.html5media.info/1.1.8/html5media.min.js"></script>
 </head>
 
 <body>
 	<div class = "wrapper">
-		<div class = "header image">
+		<div id="scroll-animate">
+		<div class = "wrapper-parallax">
+			<header>
+				<h1 class = "pagetitle"> OJBK FM </h1>
+					<!-- <div class = "descriptionBackground"> -->
+					<div class = "description">
+					<p>Welcome to the online home of OJBK FM, a temporary outdoor community radio station broadcasting live from the intersection of Malcolm X Boulevard and Fulton Street in Bed-Stuy&#45;&#45;in the back of a pink 1959 Cadillac Coup de Ville&#45;&#45;and produced by artist collective Otabenga Jones & Associates and the Central Brooklyn Jazz Consortium. Broadcasts pay tribute to legendary Bed-Stuy institution &#34;The East,&#34; (1969-1985), an educational, political and cultural hub with Black Nationalist and Pan-Africanist directives. The Cadillac pays homage to the 1990 album cover To the East, Blackwards by Brooklyn Hip Hop legends X Clan. Daily programming features live musical mixes of rediscovered vinyl, segments on Black political histories, community dialogues, improvisational jazz performances, artist interviews, and experimental sound.</p>
+
+					<!-- <p>Otabenga Jones & Associates is a Houston-based educational art organization founded in 2002 by members Dawolu Jabari Anderson, Jamal Cyrus, Kenya Evans, and Robert A. Pruitt, among others. The collective&#45;&#45;which creates actions, writings and installations, exploring the transatlantic experiences of the African Diaspora&#45;&#45;is named in tribute to Ota Benga, the Congolese Pygmy man who sought refuge at Weeksville&#39;s Howard Colored Orphan Asylum in Brooklyn after being exhibited in 1906 at the Bronx Zoo. Founded in 1999, Central Brooklyn Jazz Consortium (CBJC) is committed to the development and nurturing of audiences, institutions, and individuals throughout Brooklyn that deal with jazz, as well as other African-American cultural expressions. Many key players in CBJC were also members of &#34;The East.&#34;</p> -->
+					</div>
+					<!-- </div> -->
+						<p class = "scrolldown"> scroll down </p>
+						<div class = "arrowPic"><img src= "arrowWhite.png" alt="arrow down" style="width:50px" /></div>
+			</header>
+		<!-- </div> -->
+<!-- 	OLD 3D HEADER TITLE	
 		<div class = "container">
 			<div class = "header">
 			<span>O</span><span>J</span><span>BKFM</span>
 			</div>
-		</div>
-			<nav id= "menu">
-			  <ul>
-			    <li>Schedule
-			      <ul>
-			        <li>Click for Podcasts</li>
-			        <li>Acknowledgement</li>
-			        <li>News & Information</li>
-			        <li>Community Dialogue</li>
-			        <li>The Weusi Crates</li>
-			        <li>Memories of the East</li>
-			        <li>Public Art Talk</li>
-			        <li>Open Field Variety</li>
-			        <li>Middle Passage Future Sounds</li>
-			      </ul>
-			    </li>
-			    <li>Partners
-			      <ul>
-			        <li>Sub-Menu 2 Item</li>
-			        <li>Sub-Menu 2 Item</li>
-			        <li>Sub-Menu 2 Item</li>
-			        <li>Sub-Menu 2 Item</li>
-			        <li>Sub-Menu 2 Item</li>
-			      </ul>
-			    </li>
-			    <li>Directions
-			      <ul>
-			        <li>Sub-Menu 3 Item</li>
-			        <li>Sub-Menu 3 Item</li>
-			        <li>Sub-Menu 3 Item</li>
-			      </ul>
-			    </li>
-			    <li>About
-			      <ul>
-			        <li>It's just me in here</li>
-			      </ul>
-			    </li>
-			  </ul>
-			</nav>
-			<div class = "liveStreamNote">
-				<p> LIVESTREAM </p>
-			</div>
+		</div> -->
+			<section class = "content">
+				<div class = "nav">
+					<ul class ="menu">
+						<li> About </li>
+						<li>Full Schedule</li>
+						<li class="menuindent">Acknowledgement</li>
+						<li class="menuindent">News & Information</li>
+						<li class="menuindent">Community Dialogue</li>
+						<li class="menuindent">The Weusi Crates</li>
+						<li class="menuindent"><strong><em>Memories of the East</em></strong></li>
+						<li class="menuindent">Public Art Talk</li>
+						<li class="menuindent">Open Field Variety</li>
+						<li class="menuindent">Middle Passage Future Sounds</li>
+					</ul>
+				</div>
+				<div class="container">
+				    <div class="column center">
+				        <!-- <h4>Memories of the East</h4> -->
+				    </div>
+				    <div class="column add-bottom">
+				        <div id="mainwrap">
+				            <div id="nowPlay">
+				                <span class="left" id="npAction">Paused...</span>
+				                <span class="right" id="npTitle"></span>
+				            </div>
+				            <div id="audiowrap">
+				                <div id="audio0">
+				                    <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
+				                </div>
+				                <div id="tracks">
+				                    <a id="btnPrev">&laquo;</a>
+				                    <a id="btnNext">&raquo;</a>
+				                </div>
+				            </div>
+				            <div id="plwrap">
+				                <ul id="plList">
+				                    <li>
+				                        <div class="plItem">
+				                            <div class="plNum">01.</div>
+				                            <div class="plTitle">9/20 Memories of the East</div>
+				                            <div class="plLength">51:16</div>
+				                        </div>
+				                    </li>
+				                    <li>
+				                        <div class="plItem">
+				                            <div class="plNum">02.</div>
+				                            <div class="plTitle">9/21 Memories of the East</div>
+				                            <div class="plLength">8:30</div>
+				                        </div>
+				                    </li>
+				                    <li>
+				                        <div class="plItem">
+				                            <div class="plNum">03.</div>
+				                            <div class="plTitle">9/26 Memories of the East</div>
+				                            <div class="plLength">5:01</div>
+				                        </div>
+				                    </li>
+				                    <li>
+				                        <div class="plItem">
+				                            <div class="plNum">04.</div>
+				                            <div class="plTitle">9/27 Memories of the East</div>
+				                            <div class="plLength">8:32</div>
+				                        </div>
+				                    </li>
+				                    <li>
+				                        <div class="plItem">
+				                            <div class="plNum">05.</div>
+				                            <div class="plTitle">9/28 Memories of the East</div>
+				                            <div class="plLength">5:05</div>
+				                        </div>
+				                    </li>
+				                    <li>
+				                        <div class="plItem">
+				                            <div class="plNum">06.</div>
+				                            <div class="plTitle">10/3 Memories of the East</div>
+				                            <div class="plLength">2:49</div>
+				                        </div>
+				                    </li>
+				                    <li>
+				                        <div class="plItem">
+				                            <div class="plNum">07.</div>
+				                            <div class="plTitle">10/4 Memories of the East</div>
+				                            <div class="plLength">5:44</div>
+				                        </div>
+				                    </li>
+				                    <li>
+				                        <div class="plItem">
+				                            <div class="plNum">08.</div>
+				                            <div class="plTitle">10/5 Memories of the East</div>
+				                            <div class="plLength">5:27</div>
+				                        </div>
+				                    </li>
+				                    <li>
+				                        <div class="plItem">
+				                            <div class="plNum">09.</div>
+				                            <div class="plTitle">10/10 Memories of the East</div>
+				                            <div class="plLength">5:46</div>
+				                        </div>
+				                    </li>
+				                    <li>
+				                        <div class="plItem">
+				                            <div class="plNum">10.</div>
+				                            <div class="plTitle">10/11 Memories of the East</div>
+				                            <div class="plLength">5:25</div>
+				                        </div>
+				                    </li>
+				                    <li>
+				                        <div class="plItem">
+				                            <div class="plNum">11.</div>
+				                            <div class="plTitle">10/12 Memories of the East</div>
+				                            <div class="plLength">5:53</div>
+				                        </div>
+				                    </li>
+				                </ul>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+				<div class = "liveStreamNote">
+					<p> LIVESTREAM </p>
+				</div>
 				<div class = "player">
 				<!--VosCast.com Flash Player-->
-				<script type="text/javascript" src="http://cdn.voscast.com/player/?key=0ebf2aa415fae093f5245ca89152aa8a"></script>
-				<!--End Player-->
+					<script type="text/javascript" src="http://cdn.voscast.com/player/?key=0ebf2aa415fae093f5245ca89152aa8a"></script>
+					<!--End Player-->
 				</div>
-		<div class = "footer">
-			<!--put footer items here-->
+			</section>
+			<footer>
+				<h1> Partner Icons </h1>
+			</footer>
+		</div>
 		</div>
 	</div>
 </body>
