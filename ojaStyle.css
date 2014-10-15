@@ -1,221 +1,140 @@
-* {
-  transition:.25s ease-in-out;
-}
-
  @font-face {
   font-family: 'Helvetica Neue';
   src: url('HelveticaNeueDeskUI.ttc') format('truetype');
 }
 
-body {
-	background: white;
-}
-.wrapper {
-min-height: 100%;
-height: auto !important;
-height: 100%;
-margin-top: 0;
-padding-top: 40px;
-box-sizing: border-box;
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: -50px;
+@font-face{
+  font-family: "Science Fair";
+  src: url('Science Fair.otf') format('truetype');
 }
 
+@font-face{
+  font-family: "Science Fair Light";
+  src: url('Science Fair Light.otf') format('truetype');
+}
 .description{
   font-family: 'Helvetica Neue';
   overflow: auto;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 600px;
   position: relative;
-  padding: 20px;
-  background-color:rgba(0,0,0,0.5);
-  margin-top: 5%;
-}
+  margin: auto;
+  padding: 10px;
+  border: 5px solid white;
+  background-color:rgba(0,0,0,0.2);
+  }
 
 .description p{
  color: white;
  line-height: 140%;
  font-weight: 300%;
- font-size: 18px;
- text-shadow: black 0.1em 0.1em 0.4em;
+ font-size: 20px;
+ text-align: justify;
+ text-shadow: black 0.1em 0.2em 0.5em;
 }
 
 
 .liveStreamNote {
   width: 150px;
-  /*height: 25px;*/
-  overflow: auto;
+  height: 80px;
+ /* overflow: auto;*/
   margin: auto;
   position: fixed;
-  top: 90%;
-  left: 85%;
-  bottom: 0;
-  right: 0;
+  top: 87%;
+  right: 3%;
   text-align: center;
   font-family: 'Helvetica Neue';
-  color: #FFBAD2;
+  color: black;
   text-shadow: black 0.1em 0.1em 0.5em;
+  background-color:rgba(0,0,0,0.4);
+  padding: 1px;
+  z-index: 1;
+  }
+
+.liveStreamNote p{
+  color: white;
+  z-index: 1;
+  font-size: 24px;
 }
 
 .player {
 width: 150px;
-/*height: 30px;*/
-overflow: auto;
-margin: auto;
+/*overflow: auto;*/
 position: fixed;
-top: 95%;
-left: 85%;
-bottom: 0;
-right: 0;
+top: 92%;
+right: 3%;
+z-index: 1;
 }
 
-.footer, .push {
-height: 50px;
-font-family: Helvetica, Arial;
-font-size: 18px;
-font-weight: bold;
-text-transform: uppercase;
-width: 100%;
-}
-
-#scroll-animate
-{
-  overflow: hidden;
-}
-
-#scroll-animate-main
-{
-  width: 100%;
-  left: 0;
-  position: fixed;
-}
-
-#heightPage,
-#heightScroll
-{
-  width: 10px;
-  top: 0;
-  position: absolute;
-  z-index: 99;
-}
-
-#heightPage
-{
-  left: 0;
-}
-
-#heightScroll
-{
-  right: 0;
-}
-
-header
-{
-  width: 100%;
-  height: 100%%;
-  background: url(cadillac.jpg) no-repeat 10% 10%;
-  top: 0;
-  position: fixed;
-  z-index: -1;
-}
 
 footer
 {
   width: 100%;
-  height: 0px;
-  background: gray;
+  height: 50px;
+  background-color:rgba(0,0,0,0.4);
   bottom: 0;
   position: fixed;
-  z-index: 1;
-}
-
-.content
-{
-  height: 800px;
-  min-height: 1000px;
-  background: #ededed;
-  position: relative;
   z-index: 0;
 }
 
-.wrapper-parallax {
-  margin-top: 100%;
-  margin-bottom: 300px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+footer p{
+  color: white;
+  font-style: italic;
+}
+
+.mainbody
+{
+  background: url(cadillac.jpg) no-repeat 10% 10%;
 }
 
 .pagetitle{
   width: 100%;
-  height: 20%;
-  padding: 0;
+  height: 10%;
   margin: 0;
+  padding: 0;
   text-transform: uppercase;
-  text-align: center;
-  font-family: 'Helvetica Neue';
+  text-align: left;
+  font-family: 'Science Fair Light';
   font-size: 150px;
-  color: #fff;
-  margin-top: 4%;
-  text-shadow: black 0.1em 0.1em 0.4em;
-}
-
-/*footer h1
-{
-  line-height: 300px;
-}*/
-
-
-.scrolldown {
-  font-family: 'Helvetica Neue';
   color: white;
-  overflow: auto;
-  text-align: center;
-  margin: auto;
-  font-size: 12px;
-  top: -10px;
+  margin-top: 6%;
+  margin-left: 1%;
   text-shadow: black 0.1em 0.1em 0.4em;
 }
 
-
-.arrowPic{
-  display: block;
-  margin-left: 48%;
-  overflow: auto;
+.subtitle{
+  width: 40%;
+  height: 10%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Science Fair Light';
+  font-size: 30px;
+  font-style: italic;
+  color: white;
+  margin-top: 6%;
+  text-shadow: black 0.1em 0.1em 0.4em;
 }
 
-header,
-footer,
-#scroll-animate-main
-{
-  -webkit-transition-property: all;
-     -moz-transition-property: all;
-      transition-property: all;
-
-  -webkit-transition-duration: 0.4s;
-     -moz-transition-duration: 0.4s;
-      transition-duration: 0.4s;
-
-  -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
-     -moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
-      transition-timing-function: cubic-bezier(0, 0, 0, 1);
+.pagetitle a:link{
+  color: white;
 }
 
+.pagetitle a:visited{
+  color: white;
+}
 .nav{
   width: 28%;
-  height: 40%;
+  height: 750px;
   display: block;
-  background: gray;
+  background-color:rgba(0,0,0,0.4);
   text-align: left;
   position: absolute;
   line-height: 200%;
-  margin-top: 8%;
+  margin-top: 5%;
 }
 
 .menu ul {
-  top: 20%;
+  top: 15%;
   bottom: 0;
 }
 .menu li {
@@ -224,42 +143,6 @@ footer,
 
 .menuindent{
   margin-left: 10%;
-}
-
-/* Font Family
-================================================== */
-
-/*@import url("http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400");*/
-
-
-/* Desktop
-================================================== */
-
-.container { position:relative; padding-top: 8%; margin-left: 28%; width:700px; }
-.column { width:inherit; }
-
-
-/* Tablet (Portrait)
-================================================== */
-
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-.container { width:556px; }
-}
-
-
-/* Mobile (Portrait)
-================================================== */
-
-@media only screen and (max-width: 767px) {
-.container { width:300px; }
-}
-
-
-/* Mobile (Landscape)
-================================================== */
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-.container { width:420px; }
 }
 
 
@@ -285,7 +168,6 @@ ul { list-style:none; }
 html,body {
 -webkit-font-smoothing:antialiased;
 -webkit-text-size-adjust:100%;
-color:#C8C7C8;
 font:20px/24px "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight:300;
 padding:5px 0;
@@ -295,175 +177,89 @@ padding:5px 0;
 /* Typography
 ================================================== */
 
-h4,h6,p { color:#808080; font-weight:200; }
+h2,h3,h4,h5,h6,p { color:#808080; font-weight:200; }
 h2 { font-size:42px; line-height:44px; margin:20px 0 0; }
 h6 { font-size:18px; line-height:20px; margin:4px 0 20px; }
-p { font-size:18px; line-height:20px; margin:0 0 2px; }
+p { font-size:16px; line-height:20px; margin:0 0 2px; }
 
 
 /* Links
 ================================================== */
 
-a,a:visited { color:#ddd; outline:0; text-decoration:underline; }
+a,a:visited { color:#ddd; outline:0; text-decoration: none;}
 a:hover,a:focus { color:#bbb; }
-p a,p a:visited { line-height:inherit; }
+p a,p a:visited { color: gray; line-height:inherit; }
+p a:hover{ font-style: italic;}
 
 
-/* Misc.
-================================================== */
 
-.add-bottom { margin-bottom:20px !important; }
-.left { float:left; }
-.right { float:right; }
-.center { text-align:center; }
-
-
-/* Custom Styles
-================================================== */
-
-/* CSS Transitions */
-* {
--moz-transition:all 100ms ease;
--o-transition:all 100ms ease;
--webkit-transition:all 100ms ease;
-transition:all 100ms ease;
+.myiframe{
+  margin-top: 5%;
+  margin-left: 30%;
 }
 
-/* Highlight Styles */
-::selection { background-color:#262223; color:#444; }
-::-moz-selection { background-color:#262223; color:#444; }
-
-
-/* Audio Player Styles
-================================================== */
-
-/* Default / Desktop / Firefox */
-audio { margin:0 15px 0 14px; width:570px; }
-#mainwrap { /* add box-shadow or other styles here */ }
-#audiowrap { background-color:#231F20; margin:0 auto; }
-#plwrap { margin:0 auto; }
-#tracks { min-height:65px; position:relative; text-align:center; text-decoration:none; top:13px; }
-#nowPlay { display:inline; }
-#npTitle { margin:0; padding:21px; text-align:right; }
-#npAction { padding:21px; position:absolute; }
-#plList { margin:0; }
-#plList li { background-color:#231F20; cursor:pointer; margin:0; padding:21px 0; }
-#plList li:hover { background-color:#262223; }
-.plItem { position:relative; }
-.plTitle { left:50px; overflow:hidden; position:absolute; right:65px; text-overflow:ellipsis; top:0; white-space:nowrap; }
-.plNum { padding-left:21px; width:25px; }
-.plLength { padding-left:21px; position:absolute; right:21px; top:0; }
-.plSel,.plSel:hover { background-color:#262223!important; cursor:default!important; }
-a[id^="btn"] { background-color:#231F20; color:#C8C7C8; cursor:pointer; font-size:50px; margin:0; padding:0 27px 11px; text-decoration:none; }
-a[id^="btn"]:last-child { margin-left:-4px; }
-a[id^="btn"]:hover,a[id^="btn"]:active { background-color:#262223; }
-a[id^="btn"]::-moz-focus-inner { border:0; padding:0; }
-
-/* IE 9 */
-html[data-useragent*="MSIE 9.0"] audio { margin-left:9px; outline:none; width:680px; }
-html[data-useragent*="MSIE 9.0"] #audiowrap { background-color:#000; }
-html[data-useragent*="MSIE 9.0"] #tracks { min-height:57px; top:5px; }
-html[data-useragent*="MSIE 9.0"] a[id^="btn"] { background-color:#000; }
-html[data-useragent*="MSIE 9.0"] a[id^="btn"]:hover { background-color:#080808; }
-html[data-useragent*="MSIE 9.0"] #plList li { background-color:#000; }
-html[data-useragent*="MSIE 9.0"] #plList li:hover { background-color:#080808; }
-html[data-useragent*="MSIE 9.0"] .plSel,
-html[data-useragent*="MSIE 9.0"] .plSel:hover { background-color:#080808!important; }
-
-/* IE 10 */
-html[data-useragent*="MSIE 10.0"] audio { margin-left:6px; width:687px; }
-html[data-useragent*="MSIE 10.0"] #audiowrap { background-color:#000; }
-html[data-useragent*="MSIE 10.0"] #tracks { min-height:60px; top:8px; }
-html[data-useragent*="MSIE 10.0"] a[id^="btn"] { background-color:#000; }
-html[data-useragent*="MSIE 10.0"] a[id^="btn"]:hover { background-color:#080808; }
-html[data-useragent*="MSIE 10.0"] #plList li { background-color:#000; }
-html[data-useragent*="MSIE 10.0"] #plList li:hover { background-color:#080808; }
-html[data-useragent*="MSIE 10.0"] .plSel,
-html[data-useragent*="MSIE 10.0"] .plSel:hover { background-color:#080808!important; }
-
-/* IE 11 */
-html[data-useragent*="rv:11.0"] audio { margin-left:2px; width:695px; }
-html[data-useragent*="rv:11.0"] #audiowrap { background-color:#000; }
-html[data-useragent*="rv:11.0"] #tracks { min-height:60px; top:8px; }
-html[data-useragent*="rv:11.0"] a[id^="btn"] { background-color:#000; }
-html[data-useragent*="rv:11.0"] a[id^="btn"]:hover { background-color:#080808; }
-html[data-useragent*="rv:11.0"] #plList li { background-color:#000; }
-html[data-useragent*="rv:11.0"] #plList li:hover { background-color:#080808; }
-html[data-useragent*="rv:11.0"] .plSel,
-html[data-useragent*="rv:11.0"] .plSel:hover { background-color:#080808!important; }
-
-/* All Apple Products */
-html[data-useragent*="Apple"] audio { margin:0; width:100%; }
-html[data-useragent*="Apple"] #audiowrap { background-color:#000; }
-html[data-useragent*="Apple"] #tracks { min-height:64px; top:12px; }
-html[data-useragent*="Apple"] a[id^="btn"] { background-color:#000; }
-html[data-useragent*="Apple"] a[id^="btn"]:hover { background-color:#080808; }
-html[data-useragent*="Apple"] #plList li { background-color:#000; }
-html[data-useragent*="Apple"] #plList li:hover { background-color:#080808; }
-html[data-useragent*="Apple"] .plSel,
-html[data-useragent*="Apple"] .plSel:hover { background-color:#080808!important; }
-
-/* IOS 7 */
-html[data-useragent*="OS 7"] body { color:#373837; }
-html[data-useragent*="OS 7"] audio { margin-left:3px; width:690px; }
-html[data-useragent*="OS 7"] #audiowrap { background-color:#e6e6e6; }
-html[data-useragent*="OS 7"] #tracks { min-height:75px; top:23px; }
-html[data-useragent*="OS 7"] a[id^="btn"] { background-color:#e6e6e6; color:#373837; }
-html[data-useragent*="OS 7"] a[id^="btn"]:hover { background-color:#eee; }
-html[data-useragent*="OS 7"] #plList li { background-color:#e6e6e6; }
-html[data-useragent*="OS 7"] #plList li:hover { background-color:#eee; }
-html[data-useragent*="OS 7"] .plSel,
-html[data-useragent*="OS 7"] .plSel:hover { background-color:#eee!important; }
-
-/* Chrome */
-html[data-useragent*="Chrome"] audio { margin-left:6px; width:687px; }
-html[data-useragent*="Chrome"] #tracks { min-height:64px; top:12px; }
-html[data-useragent*="Chrome"] #audiowrap { background-color:#131313; }
-html[data-useragent*="Chrome"] a[id^="btn"] { background-color:#131313; }
-html[data-useragent*="Chrome"] a[id^="btn"]:hover { background-color:#161616; }
-html[data-useragent*="Chrome"] #plList li { background-color:#131313; }
-html[data-useragent*="Chrome"] #plList li:hover { background-color:#161616; }
-html[data-useragent*="Chrome"] .plSel,
-html[data-useragent*="Chrome"] .plSel:hover { background-color:#161616!important; }
-
-/* Chrome / Android / Tablet */
-html[data-useragent*="Chrome"][data-useragent*="Android"] audio { margin-left:5px; width:682px; }
-
-
-/* Audio Player Media Queries
-================================================== */
-
-/* Tablet Portrait */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-audio { width:526px; }
-html[data-useragent*="MSIE 9.0"] audio { width:536px; }
-html[data-useragent*="MSIE 10.0"] audio { width:543px; }
-html[data-useragent*="rv:11.0"] audio { width:551px; }
-html[data-useragent*="OS 7"] audio { width:546px; }
-html[data-useragent*="Chrome"] audio { width:543px; }
-html[data-useragent*="Chrome"][data-useragent*="Android"] audio { margin-left:5px; width:538px; }
+.menu a:link{
+  text-decoration: none;
 }
 
-/* Mobile Landscape */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-audio { width:390px; }
-html[data-useragent*="MSIE 9.0"] audio { width:400px; }
-html[data-useragent*="MSIE 10.0"] audio { width:407px; }
-html[data-useragent*="rv:11.0"] audio { width:415px; }
-html[data-useragent*="OS 7"] audio { width:410px; }
-html[data-useragent*="Chrome"] audio { width:407px; }
-html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:5px; width:403px; }
-#npTitle { width:245px; }
+.smalltext {
+  font-size: 12px;
 }
 
-/* Mobile Portrait */
-@media only screen and (max-width: 479px) {
-audio { width:270px; }
-html[data-useragent*="MSIE 9.0"] audio { width:280px; }
-html[data-useragent*="MSIE 10.0"] audio { width:287px; }
-html[data-useragent*="rv:11.0"] audio { width:295px; }
-html[data-useragent*="OS 7"] audio { width:290px; }
-html[data-useragent*="Chrome"] audio { width:287px; }
-html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:5px; width:283px; }
-#npTitle { width:167px; }
+.aboutPic{
+  margin: auto;
+}
+
+.schedule{
+  padding-left: 4%;
+}
+
+.weekend{
+  padding-left: 2%;
+}
+
+.weekend p{
+  font-size: 12px;
+}
+
+.frameborder{
+  width: 640px;
+  margin: auto;
+}
+
+.orgname a:link{
+  color: "#FFBAD2"
+}
+
+.soundcaption p {
+  font-size: 12px;
+  color: black;
+  background-color:rgba(255,255,255,0.5);
+  padding: 5px;
+}
+
+.friday{
+  width: 47%;
+  margin-left: 0;
+  margin-right: 0;
+  display: inline-block;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.saturday{
+  width: 47%;
+  margin-left: 0;
+  margin-right: 0;
+  display: inline-block;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.sunday{
+  width: 47%;
+  margin-left: 0;
+  margin-right: 0;
+  border: 1px solid white;
+  padding: 5px;
 }
